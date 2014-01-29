@@ -76,6 +76,7 @@ div.field, div.actions {
   width: 960px;
   margin: 0 auto;
   height: 100%;
+  margin-bottom: 50px;
 }
 
 .register {
@@ -91,12 +92,13 @@ div.field, div.actions {
   padding: 40px 0px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5%;
   left: 350px;
   text-align: center;
   margin-top: 10%;
   background-color: #bfe3e1;
   width: 600px;
+  border-radius: 10px;
+  border: 1px solid #49a6a2;
 }
 
 .form-input {
@@ -151,6 +153,7 @@ div.field, div.actions {
   font-weight: 400;
   width: 300px;
   font-size: 20px;
+  border-radius: 5px;
 }
 .registerbutton:hover, .signinbutton:hover {
   background-color: #429491;
@@ -163,6 +166,12 @@ div.field, div.actions {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 0;
+}
+.field_with_errors .form-input {
+  width: 100%;
+  margin: 0;
+  border: 1px solid red;
 }
 
 .circle {
