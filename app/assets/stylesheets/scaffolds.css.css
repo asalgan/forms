@@ -9,6 +9,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   height: 100%;
+  background-image: url(cloth.png);
 }
 
 p, ol, ul, td {
@@ -125,8 +126,8 @@ div.field, div.actions {
 }
 
 #error_explanation {
-  margin-left: 26%;
-  left: -220px;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   color: #f00;
   text-align: left;
@@ -139,7 +140,7 @@ div.field, div.actions {
   list-style: none;
 }
 
-.registerbutton {
+.registerbutton, .signinbutton {
   border-radius: 0px;
   margin-top: 20px;
   margin-bottom: 0px;
@@ -151,10 +152,17 @@ div.field, div.actions {
   width: 300px;
   font-size: 20px;
 }
-.registerbutton:hover {
+.registerbutton:hover, .signinbutton:hover {
   background-color: #429491;
   color: white;
   cursor: pointer;
+}
+
+.field_with_errors {
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .circle {

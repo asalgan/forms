@@ -1,9 +1,26 @@
-<%= form_for(:session, url: sessions_path) do |f| %>
+<div id="container">
+	<div class="registerbox">
+		<h1 class="register">Sign In</h1>
+	</div>
+		<div class="form">
+			<%= form_for(:session, url: sessions_path) do |f| %>
 
-  <%= f.text_field :email, placeholder: "Email", class: 'form-input' %>
+			<div class="circle"></div>
 
-  <%= f.password_field :password, placeholder: "Password", class: 'form-input' %>
+			<div class="field">
+			  <%= f.text_field :email, placeholder: "Email", class: 'form-input' %>
+			</div>
 
-  <%= f.submit "Sign in" %>
-  
-<% end %>
+			<div class="field">
+			  <%= f.password_field :password, placeholder: "Password", class: 'form-input' %>
+			</div>
+
+			<div class="actions">
+			  <%= f.submit "Sign in", class: 'signinbutton' %>
+			</div>
+			  
+			<% end %>
+			Don't have an account? <%= link_to "Register now", signup_path %>
+
+		</div>
+</div>
