@@ -176,6 +176,13 @@ div.field, div.actions {
 
 .navbar {
   height: 55px;
+  border-bottom: 2px solid gray;
+}
+
+.navbar-brand:hover a {
+  background: none;
+  color: #55B4B0;
+  text-decoration: none;
 }
 
 .circle {
