@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <div class="circle"></div>
+
   <div class="field">
     <%= f.text_field :name, placeholder: 'Name', class: 'form-input' %>
   </div>
@@ -39,6 +41,6 @@
     <%= f.check_box :agree %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :submit, class: 'registerbutton' %>
   </div>
 <% end %>
