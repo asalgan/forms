@@ -85,10 +85,46 @@ div {
   font-size: 56px;
   font-weight: 100;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .form {
   text-align: center;
   margin-top: 10%;
+}
+
+.form-input {
+  color: #36393D;
+  font-family: 'Lato', sans-serif;
+  font-weight:400;
+  font-size: 18px;
+  border-radius: 0;
+  line-height: 22px;
+  background-color: #fbfbfb;
+  padding: 13px 13px 13px 5px;
+  margin-bottom: 5px;
+  width:50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #1EBBA6;
+
+
+  &:focus{
+  background: #fff;
+  box-shadow: 0;
+  border: 2px solid #3498db;
+  color: #36393D;
+  outline: none;
+  padding: 13px 13px 13px 5px;
+  }
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
 }

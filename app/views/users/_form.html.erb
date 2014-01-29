@@ -12,28 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, placeholder: 'Name' %>
+    <%= f.text_field :name, placeholder: 'Name', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email, placeholder: 'Email' %>
+    <%= f.text_field :email, placeholder: 'Email', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username, placeholder: 'Username' %>
+    <%= f.text_field :username, placeholder: 'Username', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password, placeholder: 'Password' %>
+    <%= f.password_field :password, placeholder: 'Password', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %>
-    <%= f.password_field :password_confirmation, placeholder: 'Confirm password' %>
+    <%= f.password_field :password_confirmation, placeholder: 'Confirm password', class: 'form-input' %>
   </div>
   <div class="field">
     <%= f.label :birthday %><br>
-    <%= f.date_select :birthday %>
+    <%= f.date_select :birthday, class: 'datepicker' %>
   </div>
   <div class="field">
     <%= f.label :avatar %><br>
