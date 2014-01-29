@@ -85,7 +85,7 @@ div.field, div.actions {
   font-size: 56px;
   font-weight: 100;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 30px;
 }
 
 .form {
@@ -172,6 +172,10 @@ div.field, div.actions {
   width: 100%;
   margin: 0;
   border: 1px solid red;
+}
+
+.navbar {
+  height: 55px;
 }
 
 .circle {
