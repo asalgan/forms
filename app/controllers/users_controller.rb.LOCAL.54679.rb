@@ -10,9 +10,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find_by(:id => params[:id])
-    if params[:id] =! session[:user_id]
-      redirect_to root_url
   end
 
   # GET /users/new
@@ -31,12 +28,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-<<<<<<< HEAD
         WelcomeMailer.welcome_email(@user).deliver
         format.html { redirect_to root_url, notice: 'User was successfully created.' }
-=======
-        format.html { redirect_to root_url }
->>>>>>> master
       else
         format.html { render action: 'new' }
       end
@@ -77,5 +70,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :username, :password, :password_confirmation, :birthday, :avatar, :agree)
     end
-end
 end
