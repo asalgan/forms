@@ -94,11 +94,15 @@ div.field, div.actions {
   margin-right: auto;
   left: 350px;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 60px;
   background-color: #bfe3e1;
   width: 600px;
   border-radius: 10px;
   border: 1px solid #49a6a2;
+}
+.form a:hover {
+  color: #49a6a2;
+  background: none;
 }
 
 .form-input {
@@ -195,4 +199,9 @@ div.field, div.actions {
   margin-right: auto;
   margin-top: -79px;
   margin-bottom: 40px;
+}
+
+.gravatar {
+  margin-right: 10px;
+  margin-top: -4px;
 }

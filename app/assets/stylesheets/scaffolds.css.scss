@@ -98,11 +98,16 @@ div {
   margin-right:auto;
   left: 350px;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 60px;
   background-color: lighten(#55B4B0, 30%);
   width: 600px;
   border-radius: 10px;
   border: 1px solid darken(#55B4B0,5%);
+
+  a:hover {
+    color: darken(#55B4B0,5%);
+    background:none;
+  } 
 }
 
 .form-input {
@@ -207,4 +212,9 @@ div {
   margin-right:auto;
   margin-top: -79px;
   margin-bottom: 40px;
+}
+
+.gravatar {
+  margin-right: 10px;
+  margin-top: -4px;
 }
