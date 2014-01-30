@@ -31,12 +31,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-<<<<<<< HEAD
-        WelcomeMailer.welcome_email(@user).deliver
-        format.html { redirect_to root_url, notice: 'User was successfully created.' }
-=======
         format.html { redirect_to root_url }
->>>>>>> master
       else
         format.html { render action: 'new' }
       end

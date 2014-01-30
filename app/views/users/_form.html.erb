@@ -1,4 +1,6 @@
 <%= form_for(@user) do |f| %>
+  
+  <div class="circle"></div>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -12,28 +14,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, placeholder: 'Name' %>
+    <%= f.text_field :name, placeholder: 'Name', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email, placeholder: 'Email' %>
+    <%= f.text_field :email, placeholder: 'Email', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username, placeholder: 'Username' %>
+    <%= f.text_field :username, placeholder: 'Username', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password, placeholder: 'Password' %>
+    <%= f.password_field :password, placeholder: 'Password', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %>
-    <%= f.password_field :password_confirmation, placeholder: 'Confirm password' %>
+    <%= f.password_field :password_confirmation, placeholder: 'Confirm password', class: 'form-input' %>
   </div>
   <div class="field">
     <%= f.label :birthday %><br>
-    <%= f.date_select :birthday %>
+    <%= f.text_field :birthday, class: 'datepicker' %>
   </div>
   <div class="field">
     <%= f.label :avatar %><br>
@@ -44,6 +41,6 @@
     <%= f.check_box :agree %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :submit, class: 'registerbutton' %>
   </div>
 <% end %>
