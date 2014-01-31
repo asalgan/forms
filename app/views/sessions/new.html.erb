@@ -7,6 +7,18 @@
 
 			<div class="circle"></div>
 
+			<% if @user.errors.any? %>
+			    <div id="error_explanation">
+			      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+			      <ul>
+			      <% @user.errors.full_messages.each do |msg| %>
+			        <li><%= msg %></li>
+			      <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
+
 			<div class="field">
 			  <%= f.text_field :email, placeholder: "Email", class: 'form-input' %>
 			</div>
@@ -16,10 +28,12 @@
 			</div>
 
 			<div class="actions">
-			  <%= f.submit "Sign in", class: 'signinbutton' %>
+			  <%= f.submit "Sign in", class: 'signinbutton' %><br><br>
+			  Forgot password? <%= link_to "Reset it here", '/reset_password/new' %>
 			</div>
 			  
 			<% end %>
+			<hr>
 			Don't have an account? <%= link_to "Register now", signup_path %>
 
 		</div>

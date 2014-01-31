@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.find_by(:id => params[:id])
     if params[:id] =! session[:user_id]
       redirect_to root_url
+    end
   end
 
   # GET /users/new
@@ -74,4 +75,4 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :username, :password, :password_confirmation, :birthday, :avatar, :agree)
     end
 end
-end
+

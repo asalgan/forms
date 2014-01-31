@@ -29,18 +29,14 @@
     <%= f.password_field :password_confirmation, placeholder: 'Confirm password', class: 'form-input' %>
   </div>
   <div class="field">
-    <%= f.label :birthday %><br>
-    <%= f.text_field :birthday, class: 'datepicker' %>
+    <%= f.text_field :birthday, placeholder: 'When were you born?', class: 'form-input datepicker' %>
   </div>
   <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.text_field :avatar %>
-  </div>
-  <div class="field">
-    <%= f.label :agree %><br>
     <%= f.check_box :agree %>
+    <%= f.label :agree, "I agree to the terms of service" %>
   </div>
   <div class="actions">
-    <%= f.submit :submit, class: 'registerbutton' %>
+    <%= f.submit :submit, :value => "Join", class: 'registerbutton' %>
   </div>
 <% end %>
+<hr>

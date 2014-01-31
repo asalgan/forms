@@ -1,3 +1,5 @@
+
+
 html {
   height: 100%;
 }
@@ -26,17 +28,23 @@ pre {
 
 a {
   color: #000;
-}
-a:visited {
-  color: #666;
-}
-a:hover {
-  color: #fff;
-  background-color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
 }
 
-div.field, div.actions {
-  margin-bottom: 10px;
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+label {
+ margin-left: 5px;
 }
 
 #notice {
@@ -56,27 +64,27 @@ div.field, div.actions {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-}
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
-}
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
 }
 
 .container {
-  width: 960px;
-  margin: 0 auto;
-  height: 100%;
-  margin-bottom: 50px;
+ width: 960px;
+ margin: 0 auto;
+ height: 100%;
+ margin-bottom: 50px;
 }
 
 .register {
@@ -90,63 +98,66 @@ div.field, div.actions {
 
 .form {
   padding: 40px 0px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left:auto;
+  margin-right:auto;
   left: 350px;
   text-align: center;
   margin-top: 60px;
-  background-color: #bfe3e1;
+  background-color: lighten(#55B4B0, 30%);
   width: 600px;
   border-radius: 10px;
-  border: 1px solid #49a6a2;
-}
-.form a:hover {
-  color: #49a6a2;
-  background: none;
+  border: 1px solid darken(#55B4B0,5%);
+
+  a:hover {
+    color: darken(#55B4B0,5%);
+    background:none;
+  } 
 }
 
 .form-input {
   color: #36393D;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight:400;
   font-size: 18px;
   border-radius: 0;
   line-height: 22px;
   background-color: #fbfbfb;
   padding: 13px 13px 13px 5px;
   margin-bottom: 5px;
-  width: 80%;
+  width:80%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   border: 2px solid #1EBBA6;
-}
-.form-input:focus {
+
+
+  &:focus{
   background: #fff;
   box-shadow: 0;
   border: 2px solid #3498db;
   color: #36393D;
   outline: none;
   padding: 13px 13px 13px 5px;
+  }
 }
 
 #error_explanation {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left:auto;
+  margin-right:auto;
   border: none;
   color: #f00;
   text-align: left;
-}
-#error_explanation ul {
-  list-style: none;
-  margin: 0 0 18px 0;
-}
-#error_explanation ul li {
-  list-style: none;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+    li {
+      list-style: none;
+    }
+  }
 }
 
-.registerbutton, .signinbutton {
+.registerbutton, .signinbutton, .submitbutton {
   border-radius: 0px;
   margin-top: 20px;
   margin-bottom: 0px;
@@ -158,24 +169,27 @@ div.field, div.actions {
   width: 300px;
   font-size: 20px;
   border-radius: 5px;
-}
-.registerbutton:hover, .signinbutton:hover {
-  background-color: #429491;
-  color: white;
-  cursor: pointer;
+
+  &:hover {
+    background-color: darken(#55B4B0, 10%);
+    color: white;
+    cursor: pointer
+  }
 }
 
-.field_with_errors {
+.field_with_errors{
   width: 80%;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left:auto;
+  margin-right:auto;
   padding: 0 0;
-}
-.field_with_errors .form-input {
-  width: 100%;
-  margin: 0;
-  border: 1px solid red;
+  
+  
+  .form-input {
+    width: 100%;
+    margin: 0;
+    border: 1px solid red;
+  }
 }
 
 .navbar {
@@ -183,10 +197,12 @@ div.field, div.actions {
   border-bottom: 2px solid gray;
 }
 
-.navbar-brand:hover a {
-  background: none;
-  color: #55B4B0;
-  text-decoration: none;
+.navbar-brand {
+  &:hover a{
+    background: none;
+    color: #55B4B0;
+    text-decoration: none;
+  }
 }
 
 .circle {
@@ -194,11 +210,43 @@ div.field, div.actions {
   height: 80px;
   border-radius: 100%;
   background-color: white;
-  border: 4px solid #bfe3e1;
-  margin-left: auto;
-  margin-right: auto;
+  border: 4px solid lighten(#55B4B0, 30%);
+  margin-left:auto;
+  margin-right:auto;
   margin-top: -79px;
   margin-bottom: 40px;
+}
+
+footer {
+  padding-bottom: 50px;
+  padding-top: 5px;
+  bottom: 30;
+
+  border-top: 1px solid gray;
+  color: gray;
+  a {
+    color: gray;
+    &:hover {
+      color: gray;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+.image {
+  position: absolute;
+margin-left: 50%;
+left: -231px;
 }
 
 .gravatar {

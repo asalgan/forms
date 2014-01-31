@@ -1,0 +1,19 @@
+<div id="container">
+	<div class="registerbox">
+		<h1 class="register">Your new password</h1>
+	</div>
+		<div class="form">
+
+		<%= form_for (@user) do |f| %>
+
+
+    	<div class="field">
+      <%= f.password_field :password, placeholder: "Enter new password", class: 'form-input' %>
+    </div>
+	<div class="actions">
+      <%= f.submit "Reset Password", class: "submitbutton" %>
+    </div>
+ <% end %>
+
+ </div>
+</div>

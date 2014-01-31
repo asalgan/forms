@@ -1,3 +1,3 @@
-$(document).ready(function(){
-  $("#user_birthday").pickadate();  
+$(docuemnt).ready(function(){
+	$("#user_birthdy").datepicker();
 });
