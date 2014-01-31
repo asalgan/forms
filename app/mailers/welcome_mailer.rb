@@ -1,12 +1,11 @@
 class WelcomeMailer < ActionMailer::Base
   default from: "johngmeyers@gmail.com"
 
-  def welcome_email(user, email)
+  def welcome_email(user)
     @user = user
-    @email = email
     @url = "localhost:3000/ "
 
-    mail(:to => @email,
+    mail(:to => @user.email,
          :subject => "Welcome to Snake!",
          :date => Time.now
          )

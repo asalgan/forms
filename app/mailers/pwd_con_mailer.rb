@@ -4,7 +4,7 @@ class PwdConMailer < ActionMailer::Base
   def welcome_email(user, email)
   @user = user
   @email = email
-  @url = "localhost:3000/ "
+  @url = "localhost:3000"
 
   mail(:to => @email,
        :subject => "Reset Your Password!",

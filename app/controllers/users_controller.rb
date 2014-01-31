@@ -3,6 +3,18 @@ class UsersController < ApplicationController
 
   # GET /users
   # GET /users.json
+
+  # def welcome_mailer
+
+  # end
+
+  # def create_welcome_mailer
+  #   user = params[:user]
+  #   email = params[:email]
+  #   InviteMailer.invite_members(user, email).deliver
+
+  # end
+
   def index
     @users = User.all
   end
@@ -13,6 +25,7 @@ class UsersController < ApplicationController
     @user = User.find_by(:id => params[:id])
     if params[:id] =! session[:user_id]
       redirect_to root_url
+    end
   end
 
   # GET /users/new
@@ -73,5 +86,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :username, :password, :password_confirmation, :birthday, :avatar, :agree)
     end
-end
 end
