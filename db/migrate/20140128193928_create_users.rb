@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :username
       t.string :password
-      t.date :birthday
+      t.string :birthday
       t.string :avatar
       t.boolean :agree
 
